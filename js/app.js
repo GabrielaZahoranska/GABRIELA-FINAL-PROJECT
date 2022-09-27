@@ -2,7 +2,7 @@ function Survey(survey) {
   if (!survey) {
     throw new Error('No Survey Form found!');
   }
-
+ 
   // select the elements
   const progressbar = survey.querySelector('.progressbar');
   const surveyPanels = survey.querySelectorAll('.survey__panel');
