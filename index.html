@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>How Was Your Day?</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="header__title">Good Evening</h1>
+        <p id="description" class="header__description">
+           Let's do a quick evening check-in
+        </p>
+        <img src="/download.png" alt="" aria-hidden="true" class="illustration" />
+      </header>
+      <main class="main">
+        <form action="#" method="GET" id="survey-form" class="survey" novalidate>
+          <div class="progressbar" tabindex="0" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" aria-valuetext="Question 1 of 5: How was your day?">
+            <span class="progressbar__step active" aria-hidden="true"></span>
+            <span class="progressbar__step" aria-hidden="true"></span>
+            <span class="progressbar__step" aria-hidden="true"></span>
+            <span class="progressbar__step" aria-hidden="true"></span>
+            <span class="progressbar__step" aria-hidden="true"></span>
+          </div>
+ <!-- first question -->
+          <section class="survey__panel survey__panel--current" aria-hidden="false" data-index="1" data-panel="firstPanel" data-requirement="option">
+    
+            <h2 class="survey__panel__question">
+              <span class="visuallyhidden">Question 1 of 5 </span>How was your day? 
+            </h2>
+            <div class="survey__panel__mood">
+              <div class="form-group">
+                <input id="Amazing" type="radio" name="question_1" value="Amazing" />
+                <label for="Amazing">The BEST day ever!</label>
+              </div>
+              <div class="form-group">
+                <input id="Good" type="radio" name="question_1" value="Good" />
+                <label for="Good">It was a good day</label>
+              </div>
+              <div class="form-group">
+                <input id="ok" type="radio" name="question_1" value="ok" />
+                <label for="ok">It could be better</label>
+              </div>
+              <div class="form-group">
+                <input id="bad" type="radio" name="question_1" value="bad" />
+                <label for="bad"><span class="visuallyhidden"></span><span aria-hidden="true"></span>DON'T even ask!</label>
+              </div>
+            </div>
+            <p class="error-message"></p>
+          </section>
+    <!-- second question -->
+          <section class="survey__panel" aria-hidden="true" data-index="2" data-panel="secondPanel" data-requirement="option">
+            <h2 class="survey__panel__question">
+              <span class="visuallyhidden">Question 2 of 5 </span>Was it a productive day?
+            </h2>
+            <div class="survey__panel__satisfaction">
+              <div class="form-group">
+                <input id="fullyes" type="radio" class="radiobox" name="question_2" value="fullyes" />
+                <label for="fullyes">Yes, I accomplished all my goals for the day</label>
+              </div>
+              <div class="form-group">
+                <input id="somehow" type="radio" class="radiobox" name="question_2" value="somehow" />
+                <label for="somehow">It was somehow ok </label>
+              </div>
+              <div class="form-group">
+                <input id="notproductive" type="radio" class="radiobox" name="question_2" value="notproductive" />
+                <label for="notproductive">I wasn't very productive</label>
+              </div>
+              <div class="form-group">
+                <input id="lazy" type="radio" class="radiobox" name="question_2" value="lazy" />
+                <label for="lazy">I was a lazy bum</label>
+              </div>
+            </div>
+            <p class="error-message"></p>
+          </section>
+    <!-- thrid question -->
+    <section class="survey__panel" aria-hidden="true" data-index="3" data-panel="thirdPanel" data-requirement="checkbox">
+      <h2 class="survey__panel__question">
+        <span class="visuallyhidden">Question 3 of 5 </span>What about your health?
+      </h2>
+      <div class="survey__panel__health">
+        <div class="form-group">
+          <input type="checkbox" class="checkbox" id="hour" name="question_3" value="Search Engine" />
+          <label for="hour">Exercised for 1+ hour</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" class="checkbox" id="ten" name="question_3" value="A friend of mine" />
+          <label for="ten">Completed 10,000 steps</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" class="checkbox" id="Water" name="question_3" value="Social Media" />
+          <label for="Water">Drank 2l+ of water</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" class="checkbox" id="Fruit" name="question_3" value="Other" />
+          <label for="Fruit">Ate fruit and veggies</label>
+        </div>
+      </div>
+      <p class="error-message"></p>
+    </section>
+
+    <!-- forth question -->
+          <section class="survey__panel" aria-hidden="true" data-index="4" data-panel="fourthPanel" data-requirement="option">
+            <h2 class="survey__panel__question">
+              <span class="visuallyhidden">Question 4 of 5 </span>Did you make progress on your goals today?
+            </h2>
+            <div class="survey__panel__progress">
+              <div class="form-group">
+                <input type="radio" class="radiobox" name="question_4" id="yesprogress" value="yes" />
+                <label for="yesprogress">Yes</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" class="radiobox" name="question_4" id="maybeprogress" value="maybe" />
+                <label for="maybeprogress">Maybe</label>
+              </div>
+              <div class="form-group">
+                <input type="radio" class="radiobox" name="question_4" id="noprogress" value="no" />
+                <label for="noprogress">No</label>
+              </div>
+              <p class="error-message"></p>
+              <div class="form-group-textarea">
+                <label for="recommendation">What can I do better tomorrow?</label>
+                <textarea name="recommendText" id="recommendation" spellcheck="false"></textarea>
+              </div>
+            </div>
+          </section>
+    <!-- fifth question -->
+          <section class="survey__panel" aria-hidden="true" data-index="5" data-panel="fifthPanel" data-requirement="memory;grateful;proud">
+            <h2 class="survey__panel__question">
+              <span class="visuallyhidden">Question 5 of 5 </span> What do you want to remember?
+            </h2>
+            <div class="survey__panel__remember">
+              <div class="form-group">
+                <label for="memory" id="memory-label" class="memory">What is your favorite memory of the day? </label>
+                <input type="text" id="memory" name="memory" required placeholder="I want to remember" />
+                <p class="error-message"></p>
+              </div>
+              <div class="form-group">
+                <label for="grateful" id="grateful-label" class="grateful">What are you the most grateful for today? </label>
+                <input type="text" id="grateful" name="grateful" required placeholder="I'm grateful" />
+                <p class="error-message"></p>
+              </div>
+              <div class="form-group">
+                <label for="proud" id="proud-label" class="proud">Something I am proud of is </label>
+                <input type="text" id="proud" name="proud" required placeholder="I'm proud" />
+                <p class="error-message"></p>
+              </div>
+            </div>
+          </section>
+          <div class="form-buttons">
+            <button class="button" type="button" name="prev" disabled="disabled" aria-label="Previous" aria-hidden="true">
+              Prev
+            </button>
+            <button class="button" type="button" name="next" aria-label="Next" aria-hidden="false">Next</button>
+            <button class="button" type="submit" id="submit" name="submit" disabled="disabled" aria-hidden="true">
+              Submit
+            </button>
+            </div>
+          </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
